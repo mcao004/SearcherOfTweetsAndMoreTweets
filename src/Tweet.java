@@ -129,7 +129,7 @@ public class Tweet {
                     doc = Jsoup.connect(url.getExpandedURL()).userAgent("Mozilla/5.0").ignoreHttpErrors(true).timeout(0).get();
                 } else {
                     links.add(url.getURL());
-                    doc = Jsoup.connect(url.getExpandedURL()).userAgent("Mozilla/5.0").ignoreHttpErrors(true).timeout(0).get();
+                    doc = Jsoup.connect(url.getURL()).userAgent("Mozilla/5.0").ignoreHttpErrors(true).timeout(0).get();
                 }
                 titles.add(doc.title());
             } catch (MalformedURLException e) {
